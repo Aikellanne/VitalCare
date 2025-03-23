@@ -1,0 +1,210 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #0c182d;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem 3rem;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    background: #07070D;
+    background: linear-gradient(to right, #6666b7 0%, #1c22bb 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo i {
+    font-size: 2rem;
+}
+
+header,
+footer {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: flex-start;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    background: linear-gradient(to right, #6666b7 0%, #1c22bb 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 4px 4px 13px rgba(79, 120, 202, 0.6);
+}
+
+.specialist-banner {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    background-image: url('../../images/banner.webp'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-bottom: 12px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(136, 136, 136, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .overlay h2 {
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.specialists {
+    text-align: center;
+    padding: 2rem 2rem;
+  }
+  
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+  
+.card {
+    width: 300px;
+    background-color: azure;
+    border-radius: 5px;
+    overflow: hidden; 
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    object-position: top;
+}
+
+.card h3 {
+    margin: 10px 0 5px; 
+    font-size: 18px;
+    color: #000000;
+}
+
+.card p {
+    font-size: 14px;
+    color: #000000;
+    margin: 5px 0;
+}
+
+footer .menu-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0;
+    margin-top: 15px;
+} 
+
+@media (max-width: 1024px) {
+    .container{
+        padding: 1rem;
+    }
+    .specialist-banner {
+        height: 150px;
+    }
+
+    .overlay h2 {
+        font-size: 1.5rem;
+    }
+
+    .row {
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 250px; /* Ajusta o tamanho dos cartões */
+    }
+    .menu {
+        align-items: center;
+    }
+
+    .hero,
+    .about-us,
+    .services-section {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .specialist-banner {
+        height: 130px;
+    }
+
+    .overlay h2 {
+        font-size: 1.2rem;
+    }
+
+    .row {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 200px; /* Ajusta o tamanho dos cartões para telas menores */
+    }
+    header, footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .menu-footer {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 480px) {
+    .specialist-banner {
+        height: 120px;
+    }
+
+    .overlay h2 {
+        font-size: 1rem;
+    }
+
+    .row {
+        flex-direction: column; /* Empilha os itens em telas muito pequenas */
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 90%; /* Deixa os cartões mais largos em telas pequenas */
+        margin: 10px 0;
+    }
+}
